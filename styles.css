@@ -1,0 +1,19 @@
+.attribution {
+     font-size: 11px; text-align: center;
+     }
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+body{
+    background-color: hsl(218, 23%, 16%)
+}
+
+#box{
+    justify-content: center;
+    border: 2px solid gray;
+}
+.button{
+    padding: 30px;
+    margin: 20px;
+}
