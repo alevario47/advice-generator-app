@@ -1,6 +1,10 @@
 const resultsDiv = document.querySelector('#results');
 
+const numberDiv = document.querySelector('#advice-number')
+
 const resultsButton = document.querySelector('#get-advice')
+
+
 
 
 let adviceObject = null;
@@ -22,8 +26,8 @@ function getAdvice(){
     }).then(adviceData => {
         //Here you are making a variable, and assigning that variable with the advice data. The '.slip' function is a function from the API we are using. Which gives us the advice information we need
         adviceObject = adviceData.slip;
-        resultsDiv.innerHTML = `<p> ${adviceObject.advice} <p>`;
-        console.log(adviceData)
+        numberDiv.innerHTML = `<p> ADVICE #${adviceObject.id}<p>`;
+        resultsDiv.innerHTML = `<p> "${adviceObject.advice}"<p>`;
         //In case we do not recieve anything, we use the '.catch' method to  'catch' the error and prevent our program from completely stopping
     }).catch(error => {
         console.log(error);
